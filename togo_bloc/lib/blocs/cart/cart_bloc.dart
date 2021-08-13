@@ -9,7 +9,9 @@ part 'cart_state.dart';
 part 'cart_event.dart';
 
 class CartBloc extends Bloc<CartEvent, CartState> {
-  CartBloc() : super(CartState());
+  CartBloc() : super(CartState()) {
+    init();
+  }
 
   Future<void> init() async {
     await _restore();
