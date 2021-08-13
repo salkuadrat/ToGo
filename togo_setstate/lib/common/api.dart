@@ -1,5 +1,5 @@
-import '../common/supabase.dart';
 import '../models/models.dart';
+import 'supabase.dart';
 
 class Api {
   static Future<List<Product>?> products(int page, {int limit = 10}) async {
