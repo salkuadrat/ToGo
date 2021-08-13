@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 import 'view/home.dart';
@@ -20,7 +21,10 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'ToGo Riverpod',
       theme: ThemeData(
-        primarySwatch: Colors.teal,
+        primarySwatch: Colors.lightGreen,
+        textTheme: GoogleFonts.sourceSansProTextTheme(
+          Theme.of(context).textTheme,
+        ),
       ),
       home: Home(),
     );
