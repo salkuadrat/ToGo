@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 import 'blocs/blocs.dart';
 import 'view/home.dart';
 
-void main() {
+void main() async {
+  await Hive.initFlutter();
   runApp(
     BlocProvider(
       create: (_) => CartBloc(),
