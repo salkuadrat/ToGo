@@ -62,9 +62,14 @@ class CartState extends Equatable {
 
   CartState updateQuantity(Product product, int quantity) {
     if (has(product)) {
-      int index = ids.indexOf(product.id);
-      items.elementAt(index).quantity = quantity;
+      final index = ids.indexOf(product.id);
+      final item = items.elementAt(index);
+      item.quantity = quantity;
+
+      items.removeAt(index);
+      items.insert(index, item);
     }
+
     return copyWith(key: Uuid().v1());
   }
   
@@ -74,6 +79,7 @@ class CartState extends Equatable {
       ids.removeAt(index);
       items.removeAt(index);
     }
+    
     return copyWith(key: Uuid().v1());
   }
 
