@@ -22,7 +22,7 @@ class App extends StatelessWidget {
       title: 'ToGo BLoC',
       theme: ThemeData(
         primarySwatch: Colors.lightGreen,
-        textTheme: GoogleFonts.ralewayTextTheme(
+        textTheme: GoogleFonts.sourceSansProTextTheme(
           Theme.of(context).textTheme,
         ),
       ),
